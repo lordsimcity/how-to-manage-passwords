@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="fr">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Atelier gestion des mots de passe</title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/solarized.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="plugin/highlight/gruvbox-dark-hard.css">
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section id="fragments">
+					<img src="images/illustrationstock_cyberthreats-recolored_adobestock_422696329-removebg-preview.png" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+					<h3>Atelier gestion des mots de passe</h3>
+					<p>
+						<small>WINCKLER Simon</small>
+					</p>
+				</section>
+
+				<section>
+					<h3>Sommaire</h3>
+					<ol>
+						<li>Introduction</li>
+						<li>Risques liés à des mots de passe faibles</li>
+						<li>Création de mots de passe solides</li>
+						<li>Gestion et stockage des mots de passe</li>
+						<li>Authentification à 2 facteurs</li>
+					</ol>
+				</section>
+
+				<section>
+					<img src="images/title-introduction-removebg-preview.png" style="height: 180px; margin: 0 auto rem4 auto; background: transparent;" class="demo-logo">
+				</section>
+
+				<section>
+					<section id="fragments">
+						<h3>Qu'est-ce qu'un mot de passe ?</h3>
+						<small>
+							<span class="fragment">
+								<p>Code alphanumérique ou phrase, moyen d’authentification, qu’il faut donner pour accéder dans un endroit protégé ou pour utiliser une ressource ou un service dont l’accès est limité et protégé.</p>
+							</span>
+						</small>
+					</section>
+					<section>
+						
+						<h3>Pourquoi les mots de passe sont-ils importants ?</h3>
+						<small>
+							<span class="fragment">
+							<p>Les mots de passe sont importants car ils servent de première ligne de défense contre les pirates informatiques. Si quelqu'un peut deviner votre mot de passe, il peut accéder à vos informations personnelles.
+							</p>
+						</span>
+					 </small>
+					</section>
+				</section>
+
+
+				<section data-transition="slide" data-background="./images/OS-intro.jpg" data-background-transition="zoom">
+					<h3>Risques liés à des mots de passe faibles</h3>
+				</section>
+
+				<section>
+					<section>
+						<h3>Conséquences</h3>
+						<small>
+							<ul>
+								<span class="fragment">
+								<h4>Accès non autorisé</h4>
+								<li>Un mot de passe faible, comme "123456" ou "password," est facilement devinable par des attaquants, ce qui peut entraîner un accès non autorisé à vos comptes en ligne.</li>
+								</span>
+							</br>
+								<span class="fragment">
+								<h4>Usurpation d'identité</h4>
+								<li>Vous pourriez subir une violation de la vie privée, une usurpation d'identité ou la perte de données précieuses en raison de mots de passe faibles.</li>
+								</span>
+							</br>
+								<span class="fragment">
+								<h4>Propagation de l'attaque</h4>
+								<li>Si vous utilisez le même mot de passe pour plusieurs comptes, un attaquant pourrait compromettre plusieurs de vos comptes en exploitant une seule vulnérabilité.</li>
+							</br>
+								<a target="_blank" href="https://haveibeenpwned.com/"> Mon mail a-t-il été corrompu ?</a>
+								</span>
+							</ul>
+						</small>
+					</section>
+					<section>
+						<h4>Ce qu'il ne faut pas faire</h4>
+						<small>
+							<ul>
+								<span class="fragment">
+									<h5>Eviter les combinaisons façiles</h5>
+									<li>"123456", "azerty" et autres "motdepasse" arrivent malheureusement généralement en tête des mots de passe les plus utilisés. Inutile de dire qu'ils n'offrent aucune protection.</li>
+								</span>
+							</br>
+							<span class="fragment">
+								<h5>Ne pas utiliser de mots courants.</h5>
+								<li>Vulnérable aux attaques dites "dictionnaires".
+								</li>
+							</span>
+						</br>
+							<span class="fragment">
+								<h5>Il ne doit pas contenir d'informations personnelles.</h5>
+								<li>Personne ne doit deviner votre mot de passe à partir du nom de votre chien ou de votre film préféré. Idem pour le code de votre smartphone, préférez un nombre aléatoire à une année.</li>
+							</span>
+							</br>
+							<span class="fragment">
+								<h5>Utiliser un même mot de passe pour plusieurs comptes.</h5>
+								<li>Pour éviter les piratages en cascade, chacun de vos comptes en ligne doit être verrouillé avec un mot de passe propre et unique.</li>
+							</span>
+							</br>
+
+						</ul>
+						</small>
+					</section>
+					<section>
+						<small>
+							<span>
+							<h4>Ne pas être trop court.</h4>
+							</span>
+							<ul>
+								<li>Plus un mot de passe est court, moins il y a de combinaisons à tester, rendant l'attaque par force brute plus rapide et plus efficace.</li>
+							</ul>
+						</br>
+						</br>
+						</br>
+							<table>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>Niveau de sensibilité</td>
+									<td>Longueur</td>
+									<td>Taille de clé (en bits)</td>
+								</tr>
+								<tr>
+									<td style="background:#FF4400"></td>
+									<td></td>
+									<td style="color:#FF4400">Faible à moyen</td>
+									<td>9 à 11</td>
+									<td>~65</td>
+								</tr>
+								<tr>
+									<td style="background:#FF9900"></td>
+									<td></td>
+									<td style="color:#FF9900">Moyen à fort</td>
+									<td>12 à 14</td>
+									<td>~85</td>
+								</tr>
+								<tr>
+									<td style="background:#00AA22"></td>
+									<td></td>
+									<td style="color:#00AA22">Fort à très fort</td>
+									<td>Au moins 15</td>
+									<td>> 100</td>
+								</tr>
+					
+							</table>
+						</small>
+					</section>
+				</section>
+
+
+				<section data-transition="slide" data-background="./images/OS-intro.jpg" data-background-transition="zoom">
+					<h3>Définition d'un "mot de passe fort"</h3>
+					<span class="fragment">
+						<p align="justify">Un bon mot de passe peut contenir, par exemple, au moins 12 caractères et 4 types de caractères différents: des minuscules, des majuscules, des chiffres et des caractères spéciaux.
+						</p>
+						</span>
+				</section>
+
+				<section>
+						<h3>Création d'un mot de passe fort</h3>
+						<small>
+							<ul>
+								<h4>La méthode de la première lettre</h4>
+								<li>La méthode la plus connue, qui est très efficace, consiste à prendre une phrase assez longue – connu de personne de préférence –, de garder les initiales de chaque mot, et de les combiner en remplaçant des lettres par des chiffres et des symboles</li>
+							<em> Exemple : "un tiens vaut mieux que deux tu l’auras" donnera <b>1tvmQ2tl’A</b> </em>
+						</br>
+						<a target="_blank" href="https://www.cnil.fr/fr/generer-un-mot-de-passe-solide"> Pour s'aider</a>
+						</br>
+					</br>
+								<h4>La méthode phonétique</h4>
+								<li>De la même façon, en utilisant des équivalents phonétiques, la phrase <em>"j'ai acheté huit cd pour cent euros cet après-midi "</em> devient facilement <b>Ght8CD%€7am</b>.</li>
+							</br>
+							<h4>Utiliser une phrase de passe</h4>
+							<li>Une phrase secrète offrant un niveau de sécurité élevé est un ensemble de mots, préférablement dénué de sens, mais qu'il est possible de retenir de façon mnémotechnique, regroupant des lettres et des chiffres.</li>
+						<em> Exemple : « Ceci est ma phrase de passe » devient <b>C3ci 3st m4 phr4s3 d3 p4ss3</b> </em>
+						</br>
+						</br>
+						<a target="_blank" href="https://password.kaspersky.com/fr/"> Tester mon mot de passe</a>
+						
+							</ul>
+						</small>
+					</section>
+
+				<section>
+						<h3>Gestion et Stockage des Mots de Passe</h3>
+				</section>
+
+				<section>
+						<h3>A ne pas faire</h3>
+						<small>
+							<ul>
+							<h4>Le noter sur un post-it, carnet, téléphone ...</h4>
+							<li>Si vous écrivez vos mots de passe sur du papier ou autre support, quelqu'un pourrait les trouver et les utiliser pour accéder à vos comptes.
+								Demandez à TV5Monde ...
+							</li>
+						</br>
+					
+							<h4>Sauvegarder sur son navigateur</h4>
+							<li>Les navigateurs ne sont généralement pas conçus pour stocker les mots de passe. Les informations de connexion stockées peuvent être plus faciles à accéder pour certains types d'attaques, surtout si votre ordinateur est compromis.</li>
+							</br>
+							<h4>Le ré-utiliser</h4>
+							<li>La compromission d'un seul compte peut entraîner la compromission de tous les autres comptes liés à ce mot de passe.</li>						
+							<li>La réutilisation facilite la propagation rapide des attaques </li>
+						</ul>
+						</small>
+				</section>
+
+			<section>
+				<section>
+					<h3>Comment faire alors ?</h3>
+					<small>
+						<ul>
+							<span class="fragment">
+							
+							<li><h5>Les retenir sans les écrire ... en travaillant vos neurones</h5></li>
+							<img src="images/7_0-removebg-preview.png" style="height: 180px; margin: 0 auto 4rem auto;">
+
+							</span>
+							</br>
+				
+							<span class="fragment">
+								<li><h4>... en utilisant un gestionnaire de mots de passe</h4></li>
+								<p>Utiliser un gestionnaire de mots de passe pour stocker vos mots de passe en toute sécurité. Vous n’aurez à retenir qu’un mot de passe pour accéder à l’ensemble de vos comptes !</p>
+								</br>
+							</span>
+						</ul>
+					</small>
+				</section>
+				
+				<section>
+						<h3>Gestionnaire de mots de passe</h3>
+					<small>
+						<ul>
+						<p>Il s'agit d'une solution numérique avec laquelle on peut gérer ses mots de passe en centralisant l'ensemble de ses identifiants et mots de passe dans une base de données. Le gestionnaire de mots de passe est protégé par un mot de passe unique, afin de n'en avoir plus qu'un seul à retenir.</p>
+					</ul>
+					</small>
+				</section>
+				
+				<section>
+					<h3>Choisir un gestionnaire de mots de passe</h3>
+				<small>
+					<ul>
+
+					</ul>
+				</small>
+				</section>	
+				
+				<section>
+					<div style="display: flex; align-items: center;">
+						<h3 style="margin-right: 10px;">KeepassXC</h3>
+						<a target="_blank" href="https://keepassxc.org/">
+							<img style="width:70px;height:70px;" src="images/keepassxc_logo-removebg-preview.png">
+						</a>
+						</div>
+					<ul>
+							<h4>Fonctionnalités</h4>
+
+								<small>
+									<li>Stocker vos identifiants (nom d'utilisateur et mots de passe) de vos applications et sites favoris</li>
+									<li>Organiser votre base d'identifiants par groupe et sous-groupes</li>
+									<li>Importer des données à partir d'une autre source (un fichier CSV, un autre gestionnaire de mots de passe, etc.)</li>
+									<li>Générer des mots de passe complexe</li>
+									<li>Stocker des clés de licences, des numéros de cartes bancaires, et même des fichiers</li>
+									<li>Associer des tags à vos identifiants pour les retrouver plus facilement, autrement que par les groupes</li>
+								</small>
+						</ul>
+				</section>
+			
+				<section>
+					<h3>Installation</h3>	
+						
+							<ul>
+							
+								<div style="margin: 40px; display: flex;">
+									<div style="display: flex; align-items: center;">
+										<img style="width: 100px; height: 70px; margin-right: 10px;" src="https://logo-marque.com/wp-content/uploads/2020/09/Linux-Logo.png" alt="Linux Logo">
+										<div>
+											<h4>Linux</h4>
+											<small>
+												<ul>
+													<li>Depuis la logithèque : <b>KeepassXC</b></li>
+												</ul>
+											</small>
+										</div>
+									</div>
+								
+									<div style="display: flex; align-items: center;">
+										<img style="width: 100px; height: 70px; margin-right: 10px;" src="images/kisspng-windows-xp-logo-microsoft-windows-1-0-windows-logos-5ab719f5df9366.6936122615219491739158-removebg-preview.png
+										" alt="Windows Logo">
+										<div>
+											<ul><h4>Windows</h4>
+												<small>
+													<li><a target="_blank" href="https://keepassxc.org/download/#windows">Télécharger KeePassXC</a></li>
+												</small>
+											</ul>
+										</div>
+									</div>
+								
+								</div>
+						<small>	
+							<li>Lancer KeepassXC et à l'ouverture cliquer sur "<b>Créer une nouvelle base de données</b>".</li>
+							<li>Donner un nom à la base de données.</li>
+							<li>Laisser le <b>chiffrement par défaut</b> de la base de données.</li>
+							<li>Ensuite, vous devez définir un mot de passe maître : <b>il s'agit du mot de passe qui sert à ouvrir votre base KeePass</b>. Autrement dit, c'est la <b>clé du coffre-fort</b> ! C'est le <b>SEUL</b> mot de passe que vous devez retenir et il doit être complexe.</li>
+							<li>Sélectionner ensuite un emplacement pour le fichier. L'idéal est de le mettre sur un cloud, type Murena.</li>
+							<li>Voilà, la base de données est prête !</li>
+						</small>
+									
+							
+				</section>
+
+					<section>
+						<h1>Premiers pas</h1>
+					</section>
+					<section>
+							<small>
+								<li>Pour créer une entrée, il suffit de faire un clic droit, dans la partie droite, puis de cliquer sur "Nouvelle entrée".</li>
+							</small>
+							<img style="width: 900px; height: 700px; margin-right: 10px;" src="https://www.it-connect.fr/wp-content-itc/uploads/2022/08/KeePassXC-Nouvelle-entree-800x479.png">
+					</section>
+
+					<section>
+						<small>
+							<ul>
+							<p>A minima, je vous recommande de renseigner les champs suivants : </p>
+
+								<li><b>Titre</b> : nom de l'identifiant</li>
+								<li><b>Nom d'utilisateur</b> : nom d'utilisateur à ce compte</li>
+								<li><b>Mot de passe</b> : mot de passe de ce compte</li>
+								Lorsque les identifiants sont liés à une page Web, je vous recommande de remplir le champ "Adresse (URL)" afin de bénéficier du remplissage automatique dans le navigateur.</li>
+							</ul>
+						</small>
+
+						<img style="width: 900px; height: 700px; margin-right: 10px;" src="images/KeePassXC-Exemple-dune-entree.png">
+				</section>
+		
+				<section>
+					<h4>Intégration au(x) navigateur(s)</h4>
+
+					<small>
+						<p align="justify">KeePassXC dispose d'extensions officielles pour les navigateurs, ce qui permet au navigateur de lire les informations d'une base et de remplir automatiquement les formulaires de connexion : c'est très pratique. 
+				</br>Pour effectuer la correspondance, KeePassXC s'appuie sur l'URL renseignée dans les entrées. 
+				</br>Si l'on se connecte sur un site avec des identifiants qui ne sont pas dans la base KeePass, l'extension va proposer de créer une nouvelle entrée. Si les informations saisies sont différentes vis-à-vis de la base, l'extension proposera de mettre à jour l'entrée existante.
+			</p>
+					</small>
+				</section>
+				<section>	
+					<small>
+						<ul>
+							<li>Pour utiliser cette fonctionnalité, cliquer sur "<b>Outils</b>" -> "<b>Paramètres</b>"</li> 
+							<li>Cliquez sur "<b>Intégration aux navigateurs</b>" à gauche, puis cochez l'option "<b>Activer l'intégration aux navigateurs</b>".</li> 
+							Ensuite, vous devez activer l'intégration pour un ou plusieurs navigateurs, selon ceux que vous utilisez : <b>cochez les cases correspondantes</b>, et validez avec "<b>OK</b>". Mais, avant cela utilisez <b>les liens (en vert)	</b> pour être redirigé.e vers la page de l'extension afin <b>d'installer l'extension</b>.
+						</ul>	
+					</small>
+					<img img style="width: 1400px; height: 700px; margin-right: 10px;" src="images/integration-navigateur.png">
+
+				</section>
+				<section>	
+					<h6>Exemple sous Firefox</h6>
+			  			<video width="720" height="420" controls src="videos/keepassxc-browser.mp4">La vidéo n'arrive pas à se charger</video>
+							<small>
+								<ul>
+									<li>Il faut cliquer sur "Ajouter à Firefox", valider l'ajout et choisir de pouvoir l'exécuter ou non en navigation privée.</li>
+									<li>Pour terminer la connexion, il faut cliquer sur la nouvelle extension ajoutée.</li>
+									<li>Donner un nom au navigateur de la machine.</li>				
+									<li>C'est terminé, vous pouvez maintenant utiliser votre base de données depuis le navigateur!</li>
+								</ul>	
+							</small>
+				</section>
+				<section>	
+					<h6>Remplissage auto grâce au navigateur</h6>
+						<video controls src="videos/connexion-automatique.mp4">La vidéo n'arrive pas à se charger</video>
+				</section>
+				<section>	
+					<h2>Vous savez maintenant utiliser KeepassXC !</h2>
+				</section>
+			</section>
+			
+			<section>
+				<h2>Pour aller plus loin ...</h2>
+			</section>
+				
+			<section>
+				<section>
+					<span>
+						<h3>L'authentification à 2 facteurs/multifacteur</h3> 
+						<small>
+							<p align="justify">Une authentification multifacteur permet de prouver l’identité d’un utilisateur par la
+							vérification de plusieurs éléments, appelés facteurs d’authentification. Chacun des
+							facteurs d’authentification mis en œuvre doit appartenir à une catégorie de facteur
+							différente. L’absence d’un des facteurs nécessaire à une authentification multifacteur
+							doit faire échouer l’authentification.</p>
+						</small>
+					</span>
+				</section>
+
+				<section>
+					<h4>Différents types de facteurs d'authentification possibles :</h4>
+					<small>
+						<ul>
+							<li><b>Facteur de connaissance :</b> <em>« Quelque chose que vous savez »</em>, il s’agit d’une connaissance devant être mémorisée
+								telle qu’une phrase de passe, un mot de passe, un code, etc ;</li>
+							</br>
+							<li><b>Facteur de possession :</b> <em>« Quelque chose que vous avez »</em>, il s’agit d’un élément secret non mémorisable
+								contenu dans un objet physique qui idéalement protège cet élément de toute extraction, tel
+								qu’une carte à puce, un token, un téléphone (un appareil physique ou un code généré par une application);</li>
+							</br>
+							<li><b>Facteur inhérent :</b> <em>« Quelque chose que vous êtes »</em>, il s’agit d’une caractéristique physique intrinsèquement
+								liée à une personne et indissociable de la personne elle-même, telle qu’une caractéristique
+								biologique (ADN), morphologique (empreinte digitale, empreinte rétinienne) ou comporte-
+								mentale 4 (voix, frappe au clavier).</li>
+						</ul>
+					</small>
+				</section>
+
+				<section>
+						<h4>Avantages de l'authentification à deux facteurs (2FA) :</h4>
+						<small>
+							<ul>
+							<span class="fragment">
+					    		<li><b>Renforcement de la sécurité :</b> La 2FA renforce significativement la sécurité en ajoutant une couche supplémentaire d'authentification au-delà du simple mot de passe. Même si un mot de passe est compromis, l'accès au compte nécessite un deuxième facteur d'authentification.
+								</li>
+							</span>
+						</br>
+							<span class="fragment">
+								<li><b>Protection contre l'accès non autorisé :</b> En exigeant un deuxième facteur, la 2FA rend plus difficile pour les attaquants d'accéder à des comptes en ligne, même s'ils ont réussi à obtenir le mot de passe.
+								</li>
+							</span>
+						</br>
+							<span class="fragment">
+					    		<li><b>Réduction du risque de vol d'identité :</b> La 2FA ajoute une barrière supplémentaire pour empêcher le vol d'identité en ligne, car les attaquants auraient besoin d'accéder à la fois au mot de passe et au deuxième facteur d'authentification.
+								</li>
+						</br>
+							<span class="fragment">
+				    			<li><b>Prévention des attaques par force brute :</b> La 2FA rend les attaques par force brute plus difficiles, car les attaquants devraient non seulement deviner le mot de passe, mais aussi le deuxième facteur.
+								</li>
+							</span>
+						</br>
+							<span class="fragment">
+					    		<li><b>Sécurité pour les accès à distance :</b> La 2FA est particulièrement bénéfique pour les accès à distance, car elle ajoute une couche de protection supplémentaire lorsque les utilisateurs se connectent depuis des endroits différents.
+								</li>
+							</span>
+						</br>
+							</ul>
+						</small>
+				</section>
+			
+				
+			</section>
+			<section>
+				<h3><a target="_blank" href="https://framaforms.org/feedback-sur-latelier-gestion-des-mots-de-passe-1702032125">Feedback</a></h3>
+			</section>
+
+
+		
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/search/search.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+
+			// Also available as an ES module, see:
+			// https://revealjs.com/initialization/
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+			});
+
+		</script>
+
+	</body>
+</html>
